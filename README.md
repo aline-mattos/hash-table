@@ -49,6 +49,11 @@ O método `remover()` para <b>sondagem linear</b> procura um cliente na tabela h
 
 É importante ressaltar que existe uma diferença, quando o espaço na tabela é vazio, ou seja, nunca foi inserido um valor ali, ele é definido como "-1", já quando um valor é removido e o espaço se torna disponível, ele é definido como "-2".
 
+### Método Redimensionar Tabela
+O método de `redimensionarTabela()` para <b>sondagem linear</b> aumenta o tamanho da tabela hash quando o fator de carga (número de elementos dividido pelo número de posições) excede um limite, realocando os clientes em novas posições calculadas com base no método de sondagem linear, de modo a evitar colisões. Já para <b>lista encadeada</b> aumenta o tamanho da tabela hash quando o fator de carga ultrapassa um limite, criando uma nova tabela com mais posições e realocando as listas encadeadas correspondentes, permitindo que mais clientes sejam acomodados com eficiência e evitando colisões em cada lista individual. 
+
+Ambos os métodos visam garantir que a tabela não fique sobrecarregada, mantendo o desempenho eficiente na inserção, busca e remoção de clientes.
+
 ### Método Imprimir
-O método de `imprimir()` nada mais faz que imprimir a árvore de forma amigável para o entendimento do usuário;
+O método de `imprimir()` percorre a tabela hash e exibe as informações dos clientes armazenados nas posições da tabela, permitindo visualizar o conteúdo da estrutura. Ele mostra os dados dos clientes, como CPF e nome, nas posições que não estejam marcadas como vazias ou removidas, tornando mais claro o estado atual da tabela hash e seus elementos.
 
